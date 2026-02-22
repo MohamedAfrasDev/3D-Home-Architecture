@@ -3,6 +3,9 @@ import Navbar from "../../components/Navbar";
 import {ArrowRight,ArrowUpRight} from "lucide-react";
 import Button from "../../components/ui/Button";
 import {Layers, Clock} from "lucide-react";
+import {useNavigate} from "react-router";
+
+import Upload from "../../components/Upload";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Build It" },
@@ -11,6 +14,16 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+
+  const navigate = useNavigate();
+
+  const handleUploadComplete = async (base64Image: string) => {
+    const newId = Date.now().toString();
+
+    navigate(`/visualizer/${newId}`);
+
+    return true;
+  }
   return (<div className="home">
     <Navbar/>
     <section className="hero"> <div className="announce"> <div className="dot">
@@ -46,7 +59,7 @@ export default function Home() {
             <p>Supports JPG, PNG, formats up to 10MB</p>
           </div>
 
-          <p>Upload images</p>
+          <Upload onComplete={handleUploadComplete}/>
         </div>
 
       </div>
