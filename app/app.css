@@ -6,10 +6,10 @@
   --color-surface: #ffffff;
   --color-surface-highlight: #f3f4f6;
   --color-primary: #1680f9;
-  --color-secondary: #ff8800;
+  --color-secondary: #21252d;
   --color-accent: #8b5cf6;
-  --font-serif: "Instrument Serif", serif;
-  --font-sans: Inter, sans-serif;
+  --font-serif: "Poppins", serif;
+  --font-sans: Poppins, sans-serif;
   --shadow-neobrutalism: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 
@@ -21,7 +21,7 @@
   body {
     background-color: #fdfbf7;
     color: #1a1a1a;
-    font-family: Inter, sans-serif;
+    font-family: Poppins, serif;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -31,7 +31,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Instrument Serif", serif;
+    font-family: "Poppins", serif;
   }
 
   /* Custom Scrollbar */
@@ -59,7 +59,7 @@
     @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed;
 
     &.btn--primary {
-      @apply bg-primary text-white hover:bg-[#EA580C] shadow-sm;
+      @apply bg-primary text-white hover:text-secondary shadow-sm;
     }
 
     &.btn--secondary {
@@ -149,7 +149,7 @@
         }
 
         .cta {
-          @apply inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1.5 text-xs uppercase tracking-wide bg-primary text-white hover:bg-[#EA580C] shadow-sm;
+          @apply inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1.5 text-xs uppercase tracking-wide bg-primary text-white hover:text-secondary shadow-sm;
         }
       }
     }
@@ -181,7 +181,7 @@
         @apply flex flex-col space-y-3;
 
         .confirm {
-          @apply bg-primary hover:bg-orange-600 text-white;
+          @apply bg-primary hover:text-secondary text-white;
         }
 
         .cancel {
@@ -433,7 +433,7 @@
         @apply flex flex-col sm:flex-row gap-4 justify-center mb-16;
 
         .cta {
-          @apply inline-flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background px-8 py-3 text-sm uppercase tracking-wide font-bold bg-primary text-white hover:bg-[#ea580c] shadow-md;
+          @apply inline-flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background px-8 py-3 text-sm uppercase tracking-wide font-bold bg-primary text-white hover:bg-secondary shadow-md;
 
           .icon {
             @apply ml-2 w-4 h-4;
